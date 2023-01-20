@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../models/Questions.dart';
+import '../models/question_model.dart';
 import '../screens/score/score_screen.dart';
 
 class QuestionController extends GetxController
@@ -37,7 +37,7 @@ class QuestionController extends GetxController
   int get selectedAns => this._selectedAns;
 
   // for more about obs please check documentation
-  RxInt _questionNumber = 1.obs;
+  final RxInt _questionNumber = 1.obs;
   RxInt get questionNumber => this._questionNumber;
 
   int _numOfCorrectAns = 0;
@@ -47,7 +47,7 @@ class QuestionController extends GetxController
   @override
   void onInit() {
     _animationController =
-        AnimationController(duration: Duration(seconds: 60), vsync: this);
+        AnimationController(duration: const Duration(seconds: 60), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController)
       ..addListener(() {
         // update like setState
@@ -76,7 +76,7 @@ class QuestionController extends GetxController
     _animationController.stop();
     update();
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       nextQuestion();
     });
   }
@@ -85,13 +85,13 @@ class QuestionController extends GetxController
     if (_questionNumber.value != _questions.length) {
       _isAnswered = false;
       _pageController.nextPage(
-          duration: Duration(milliseconds: 250), curve: Curves.ease);
+          duration:const Duration(milliseconds: 250), curve: Curves.ease);
 
       _animationController.reset();
 
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(ScoreScreen());
+      Get.to(const ScoreScreen());
     }
   }
 

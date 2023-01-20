@@ -10,8 +10,7 @@ class ScoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: no_leading_underscores_for_local_identifiers
-    QuestionController _qnController = Get.put(QuestionController());
+    QuestionController qnController = Get.put(QuestionController());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -29,7 +28,7 @@ class ScoreScreen extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+                "${qnController.correctAns * 10}/${qnController.questions.length * 10}",
                 style: Theme.of(context)
                     .textTheme
                     .headline4

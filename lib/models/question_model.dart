@@ -6,6 +6,7 @@ class Question {
   Question({required this.id, required this.question, required this.answer, required this.options});
 }
 
+// ignore: constant_identifier_names
 const List sample_data = [
   {
     "id": 1,
