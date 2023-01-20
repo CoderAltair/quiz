@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/screens/auth/signup.dart';
 
 import '../welcome/welcome_screen.dart';
 
@@ -43,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return const WelcomeScreen();
+                            return const SecondPage();
                           },
                         ),
                       );
