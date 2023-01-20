@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/screens/auth/signup.dart';
 
-import '../welcome/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,11 +27,11 @@ class _SplashScreenState extends State<SplashScreen> {
               });
             },
             children: [
-              splashScreen('images/1.png', 'Quiz',
+              splashScreen('assets/images/1.jpg', 'Quiz',
                   'For professional documents, it is important to keep consistent typography. At the same time, documents that contain many text elements (e.g. reports) may become troublesome to configure, even with techniques such as global text styles or DSL extensions (creating more complex structures defined as C# extension methods).'),
-              splashScreen('images/1.png', 'Quiz',
+              splashScreen('assets/images/1.jpg', 'Quiz',
                   'For professional documents, it is important to keep consistent typography. At the same time, documents that contain many text elements (e.g. reports) may become troublesome to configure, even with techniques such as global text styles or DSL extensions (creating more complex structures defined as C# extension methods).'),
-              splashScreen('images/1.png', 'Quiz',
+              splashScreen('assets/images/1.jpg', 'Quiz',
                   'For professional documents, it is important to keep consistent typography. At the same time, documents that contain many text elements (e.g. reports) may become troublesome to configure, even with techniques such as global text styles or DSL extensions (creating more complex structures defined as C# extension methods).'),
             ],
           ),
