@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:quiz/screens/welcome/welcome_screen.dart';
+import 'package:get/get.dart';
+import '../quiz/quiz_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -28,15 +28,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Center(
               child: InkWell(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const WelcomeScreen();
-                      },
-                    ),
-                  );
-                },
+                onTap: () => Get.to(const QuizScreen()),
                 child: Container(
                   decoration: const BoxDecoration(),
                   width: w,

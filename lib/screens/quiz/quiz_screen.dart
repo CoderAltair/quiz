@@ -17,10 +17,27 @@ class QuizScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          ElevatedButton(onPressed: controller.nextQuestion, child: const Text("Skip")),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: controller.nextQuestion,
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12), // <-- Radius
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text("Skip"),
+                  Icon(Icons.navigate_next_rounded)
+                ],
+              ),
+            ),
+          ),
         ],
       ),
-      body:const Body(),
+      body: const Body(),
     );
   }
 }

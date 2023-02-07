@@ -11,25 +11,25 @@ const List sample_data = [
   {
     "id": 1,
     "question":
-        "Flutter is an open-source UI software development kit created by ______",
+        "Flutter texnologiyasi qaysi kompaniya tomonidan ishlab chiqilgan",
     "options": ['Apple', 'Google', 'Facebook', 'Microsoft'],
     "answer_index": 1,
   },
   {
     "id": 2,
-    "question": "When google release Flutter.",
-    "options": ['Jun 2017', 'Jun 2017', 'May 2017', 'May 2018'],
+    "question": "Google qachondan flutterga reliz bergan",
+    "options": ['Iyul 2017', 'Iyun 2017', 'May 2017', 'May 2018'],
     "answer_index": 2,
   },
   {
     "id": 3,
-    "question": "A memory location that holds a single letter or number.",
+    "question": "So`zlar qaysi tipda yoziladi",
     "options": ['Double', 'Int', 'Char', 'Word'],
     "answer_index": 2,
   },
   {
     "id": 4,
-    "question": "What command do you use to output data to the screen?",
+    "question": "Chop ettish komandasi qaysi bir javobda",
     "options": ['Cin', 'Count>>', 'Cout', 'Output>>'],
     "answer_index": 2,
   },
